@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Socket Ping</title>
+    <script src="/node_modules/socket.io-client/socket.io.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+        const pingSocket = io.connect('localhost:3000/')
+        pingSocket.on('ping', (latency) => {
+            console.log(latency)
+        });
+    </script>
+
+</html>
